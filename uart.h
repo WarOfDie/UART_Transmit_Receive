@@ -15,16 +15,16 @@
  */
 #define USART_MODE_TX      					((uint32_t)(0x00000008))
 #define USART_MODE_RX      					((uint32_t)(0x00000004))
-#define USART_MODE_RX_TX    				((uint32_t)(0x0000000C))
+#define USART_MODE_RX_TX    				 	((uint32_t)(0x0000000C))
 /*
  * @def_group WordLength_Types
  */
-#define USART_WORDLENGTH_8BITS				((uint32_t)(0x00000000))
-#define USART_WORDLENGTH_9BITS				((uint32_t)(0x00001000))
+#define USART_WORDLENGTH_8BITS					((uint32_t)(0x00000000))
+#define USART_WORDLENGTH_9BITS					((uint32_t)(0x00001000))
 /*
  * @def_group Parity_Types
  */
-#define USART_PARITY_ON_EVEN				((uint32_t)(0x0000600))
+#define USART_PARITY_ON_EVEN					((uint32_t)(0x0000600))
 #define USART_PARITY_ON_ODD					((uint32_t)(0x0000400))
 #define USART_PARITY_OFF					((uint32_t)(0x0000000))
 /*
@@ -33,7 +33,7 @@
 #define USART_STOPBITS_1					((uint32_t)(0x0000000))
 #define USART_STOPBITS_HALF					((uint32_t)(0x0001000))
 #define USART_STOPBITS_2					((uint32_t)(0x0002000))
-#define USART_STOPBITS_1_HALF				((uint32_t)(0x0003000))
+#define USART_STOPBITS_1_HALF					((uint32_t)(0x0003000))
 /*
  * @def_group StopBits_Types HardWareFlowControl_Types
  */
@@ -60,8 +60,8 @@ struct USART_InitTypedef_t {
 	uint32_t BaudRate; 					/* UART Baud Rate (veri iletim hızı) ayarlaması yapılır.*/
 	uint32_t Parity;   					/*UART Parity bit ayarını yapar.*/
 	uint32_t StopBits; 					/*UART Stop bit ayarını yapar.*/
-	uint32_t WordLength;				/*UART Word Length (veri kelime uzunluğu) ayarını yapar.*/
-	uint32_t HardWareFlowControl;		/*UART Hardware Flow control (donanım akış kontrolü ) ayarını yapar*/
+	uint32_t WordLength;					/*UART Word Length (veri kelime uzunluğu) ayarını yapar.*/
+	uint32_t HardWareFlowControl;				/*UART Hardware Flow control (donanım akış kontrolü ) ayarını yapar*/
 
 };
 struct UART_HandleTypedef_t {
