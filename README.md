@@ -15,22 +15,34 @@ UARTBase sınıfı, UART/USART işlemlerini gerçekleştirmek için kullanılır
 
 #### Örnek Kod
 ```cpp
+#include "main.h"
 #include "uart.h"
 
 UART_HandleTypedef_t Handle;
 
 
+void RS485_GPIO_Config(void);
 void UARTConfig(void);
 
 int main(void)
 {
 	uint8_t data [] = { 0x66, 0x65, 0x72, 0x67, 0x61, 0x6E, 0x69}; // f: 0x66 e: 0x65 r: 0x72 g: 0x67 a: 0x61 n: 0x6E i: 0x69
 	UARTConfig();
-	UARTBase huart(&Handle);
 
-	huart.USART_Transmit(&Handle, data , 7);
-	huart.UART_Recieve(&Handle, data, 1);
 
+	/****************      RS422     ************************/
+	UARTBase huart1(&Handle);
+
+
+	huart1.USART_Transmit(&Handle, data , 7);
+	huart1.UART_Recieve(&Handle, data, 1);
+
+	/****************      RS485     ************************/
+	UARTBase huart2(&Handle,RS485);
+
+
+	huart2.USART_Transmit(&Handle, data , 7);
+	huart2.UART_Recieve(&Handle, data, 1);
 
 	return 0;
 }
