@@ -72,11 +72,7 @@ void RS485_GPIO_Config(void)
 
 	  __HAL_RCC_GPIOB_CLK_ENABLE();
 
-	 
-	  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
-
-	 
-	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_RESET);
+	   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_RESET);
 
 	  GPIO_InitStruct.Pin = GPIO_PIN_6;
 	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
